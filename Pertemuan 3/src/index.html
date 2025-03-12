@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form & Table</title>
+    <link href="./output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 flex flex-col items-center min-h-screen p-4">
+    <div class="w-1/2 bg-white mt-5 p-5 rounded-lg shadow-lg text-center">
+        <h2 class="text-2xl font-bold">Form Penjualan</h2>
+        <form action="" method="post" class="mt-4 text-left">
+            <div class="mb-4">
+                <label class="block font-bold">Produk</label>
+                <input type="text" class="w-full p-2 border rounded">
+            </div>
+            <div class="mb-4">
+                <label class="block font-bold">Jumlah</label>
+                <input type="number" class="w-full p-2 border rounded">
+            </div>
+            <div class="mb-4">
+                <label class="block font-bold">Harga</label>
+                <input type="number" class="w-full p-2 border rounded">
+            </div>
+            <button class="bg-pink-500 hover:bg-blue-700 text-white py-2 rounded w-full">Tambahkan</button>
+        </form>
+    </div>
+    
+    <div class="w-1/2 bg-white mt-5 p-5 rounded-lg shadow-lg text-center">
+        <h2 class="text-2xl font-bold">Data Penjualan Bulanan</h2>
+        <table class="w-full border-collapse mt-4">
+            <thead>
+                <tr class="bg-pink-500 text-white">
+                    <th rowspan="2" class="p-2 border">No</th>
+                    <th rowspan="2" class="p-2 border">Produk</th>
+                    <th colspan="2" class="p-2 border">Penjualan</th>
+                </tr>
+                <tr class="bg-pink-500 text-white">
+                    <th class="p-2 border">Jumlah</th>
+                    <th class="p-2 border">Harga Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border">
+                    <td class="p-2 border">1</td>
+                    <td class="p-2 border">Sepatu</td>
+                    <td class="p-2 border">50</td>
+                    <td class="p-2 border">Rp 25.000.000</td>
+                </tr>
+                <tr class="border">
+                    <td class="p-2 border">2</td>
+                    <td class="p-2 border">Tas</td>
+                    <td class="p-2 border">30</td>
+                    <td class="p-2 border">Rp 15.000.000</td>
+                </tr>
+                <tr class="border">
+                    <td class="p-2 border">3</td>
+                    <td class="p-2 border">Jam Tangan</td>
+                    <td class="p-2 border">20</td>
+                    <td class="p-2 border">Rp 10.000.000</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="bg-gray-200 font-bold">
+                    <td colspan="2" class="p-2 border">Total Penjualan</td>
+                    <td class="p-2 border">100</td>
+                    <td class="p-2 border">Rp 50.000.000</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <footer class="text-center mt-5 text-gray-500">
+        <p>Copyright &copy; 2025 Rachelia Achmara.</p>
+    </footer>
+</body>
+</html>

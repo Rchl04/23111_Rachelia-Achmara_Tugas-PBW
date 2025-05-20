@@ -15,7 +15,7 @@ class Book {
 
     //Setter untuk Kode Buku
     private function setCodeBook($code_book) {
-        // Cek/Validasi format penulisan kode_buku: 2 huruf besar diikuti oleh 2 angka
+        // Cek/Validasi format penulisan code_book: 2 huruf besar diikuti oleh 2 angka
         if (preg_match('/^[A-Z]{2}[0-9]{2}$/', $code_book)) {
             $this->code_book = $code_book;
         } else {

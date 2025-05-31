@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UTS PBW - Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Navbar -->
+    <header class="flex items-center justify-between p-6 shadow-md bg-white">
+      <h1 class="text-2xl font-bold text-pink-600">💐FloRachel</h1>
+      <nav class="space-x-4">
+        <a href="#features" class="text-gray-600 hover:text-pink-600">Keunggulan</a>
+        <a href="#pricing" class="text-gray-600 hover:text-pink-600">Harga</a>
+        <a href="#contact" class="text-gray-600 hover:text-pink-600">Kontak</a>
+      </nav>
+    </header>
 
+    <!-- Section -->
+    <section class="text-center py-20 bg-pink-50">
+      <h2 class="text-4xl font-bold mb-4">Buket bunga cantik untuk segala momen💐</h2>
+      <p class="text-lg text-gray-600 mb-6">Hadiah yang sempurna untuk orang tercinta, dibuat dengan cinta dan keindahan alami.</p>
+      <button onclick="scrollToSection('pricing')" class="bg-pink-600 text-white px-6 py-3 rounded-full hover:bg-pink-700 transition">
+        Lihat Harga
+      </button>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h3 class="text-3xl font-bold text-center mb-12">Mengapa Memilih Kami?</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-xl shadow-md text-center">
+            <div class="text-3xl mb-2">🌸</div>
+            <h4 class="text-xl font-semibold mb-2">Bunga Segar</h4>
+            <p class="text-gray-600">Kami hanya menggunakan bunga segar pilihan langsung dari petani lokal.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-md text-center">
+            <div class="text-3xl mb-2">🎀✨</div>
+            <h4 class="text-xl font-semibold mb-2">Desain Elegan</h4>
+            <p class="text-gray-600">Dirancang dengan estetika modern yang cocok untuk semua acara.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-md text-center">
+            <div class="text-3xl mb-2">🚚</div>
+            <h4 class="text-xl font-semibold mb-2">Pengiriman Cepat</h4>
+            <p class="text-gray-600">Layanan pengiriman cepat dan aman ke seluruh kota Anda.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-gray-50 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-12">Pilih Paket Anda</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <img src="../gambar/mini_bouquet.png" alt="Mini Bouquet" class="rounded mb-4 w-full h-auto object-cover bg-white">
+            <h4 class="text-xl font-bold mb-2">Mini</h4>
+            <p class="text-gray-600 mb-4">Buket kecil, manis, dan penuh warna</p>
+            <p class="text-2xl font-semibold mb-4">Rp75.000</p>
+            <button onclick="showPopup('Terima kasih telah memilih paket Mini! Silakan isi formulir pemesanan terlebih dahulu.')" class="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700">Beli</button>
+          </div>
+          <div class="bg-pink-600 text-white p-6 rounded-xl shadow-lg transform scale-105">
+            <img src="../gambar/classic_bouquet.png" alt="Classic Bouquet" class="rounded mb-4 w-full h-auto object-cover bg-white">
+            <h4 class="text-xl font-bold mb-2">Classic</h4>
+            <p class="mb-4">Pilihan populer untuk hadiah spesial</p>
+            <p class="text-2xl font-semibold mb-4">Rp150.000</p>
+            <button onclick="showPopup('Terima kasih telah memilih paket Classic! Silakan isi formulir pemesanan terlebih dahulu.')" class="bg-white text-pink-600 px-4 py-2 rounded hover:bg-gray-100">Beli</button>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <img src="../gambar/luxury_bouquet.png" alt="Luxury Bouquet" class="rounded mb-4 w-full h-auto object-cover bg-white">
+            <h4 class="text-xl font-bold mb-2">Luxury</h4>
+            <p class="text-gray-600 mb-4">Buket eksklusif dengan bunga premium</p>
+            <p class="text-2xl font-semibold mb-4">Rp250.000</p>
+            <button onclick="showPopup('Terima kasih telah memilih paket Luxury! Silakan isi formulir pemesanan terlebih dahulu.')" class="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700">Beli</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-6">Hubungi Kami & Pesan Sekarang</h3>
+        <p class="text-gray-600 mb-4">Kami siap membantu kamu memilih bunga yang paling cocok untuk momen spesialmu. 💐🌸</p>
+        <form id="contactForm" onsubmit="submitForm(event)" class="mt-6 space-y-4">
+          <input type="text" placeholder="Nama Anda" class="w-full p-3 border rounded" required />
+          <input type="email" placeholder="Email Anda" class="w-full p-3 border rounded" required />
+          <textarea placeholder="Pesan" class="w-full p-3 border rounded h-32" required></textarea>
+          <button type="submit" class="bg-pink-600 text-white px-6 py-3 rounded hover:bg-pink-700">Kirim</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Popup Modal -->
+    <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+      <div class="bg-white p-6 rounded-xl shadow-lg text-center max-w-sm">
+        <p id="popup-message" class="text-lg mb-4">Popup</p>
+        <button onclick="closePopup()" class="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700">Tutup</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center p-6 bg-gray-100 text-gray-600">
+      &copy; 2025 FloRachel. Semua hak dilindungi.
+    </footer>
+
+    <script>
+      function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+      }
+
+      function showPopup(message) {
+        document.getElementById('popup-message').textContent = message;
+        document.getElementById('popup').classList.remove('hidden');
+        document.getElementById('popup').classList.add('flex');
+      }
+
+      function closePopup() {
+        document.getElementById('popup').classList.remove('flex');
+        document.getElementById('popup').classList.add('hidden');
+      }
+
+      function submitForm(event) {
+        event.preventDefault();
+        showPopup('Pesan Anda telah dikirim! Kami akan segera menghubungi Anda untuk detail pemesanan.');
+        const form = document.getElementById('contactForm');
+        form.reset();
+      }
+    </script>
+  </body>
+</html>
